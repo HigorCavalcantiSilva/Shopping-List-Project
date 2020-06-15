@@ -4,10 +4,10 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '/', component: () => import('pages/Index.vue') },
-      { path: 'list', component: () => import('pages/List.vue') },
-      { path: 'cart', component: () => import('pages/Cart.vue') },
-      { path: 'products', component: () => import('pages/Products.vue') }
+      { path: '/', component: () => import('pages/Index.vue'), meta: 'Shopping List' },
+      { path: 'list', component: () => import('pages/List.vue'), meta: 'Seções' },
+      { path: 'cart', component: () => import('pages/Cart.vue'), meta: 'Carrinho' },
+      { path: 'products', component: () => import('pages/Products.vue'), meta: 'Produtos' }
     ]
   }
 ]

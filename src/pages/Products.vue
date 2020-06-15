@@ -17,7 +17,7 @@
         </thead>
         <tbody>
           <tr v-for="(section, key) in list" :key="section.id">
-              <td v-if="section.idi === id" style="text-align: center"><q-btn @click="addCart(section.id)" color="blue" style="width: 100%;"><q-icon name="add_shopping_cart" />{{ section.name }}</q-btn></td>
+              <td v-if="section.idi === id" style="text-align: center"><q-btn @click="addCart(section.id)" class="bg-blue-8" style="width: 100%; color: white"><q-icon name="add_shopping_cart" />{{ section.name }}</q-btn></td>
               <td v-if="section.idi === id" style="width: 30%; text-align: center">
                   <q-btn style="width: 50%" @click="edit(section.id)" color="yellow" glossy text-color="black" push icon="create" />
                   <q-btn style="width: 50%" @click="del(section.id, key)" color="red" glossy text-color="black" push icon="delete" />
@@ -26,7 +26,7 @@
         </tbody>
     </table>
     <div style="width: 90%; margin-bottom: 20px">
-      <q-input v-model="new_product" bottom-slots label="Adicione um produto" counter maxlength="12" dense="dense">
+      <q-input v-model="new_product" bottom-slots label="Adicione um produto" counter maxlength="30" dense="dense">
         <template v-slot:before>
           <q-icon name="library_add" />
         </template>

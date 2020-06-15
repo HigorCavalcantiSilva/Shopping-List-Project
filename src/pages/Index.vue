@@ -12,6 +12,11 @@
       <h6 style="margin-top: 0">Esse app vai te ajudar para que isso não aconteça!😉</h6>
     </div>
   </div>
+  <q-footer class="glossy" elevated>
+    <q-toolbar>
+      <q-toolbar-title class="text-body2" style="text-align: center">&copy; Hicker's Code</q-toolbar-title>
+    </q-toolbar>
+  </q-footer>
   </q-page>
 </template>
 
@@ -123,7 +128,6 @@ if ((db1 === '' || db1 === null || db1 === undefined) && (db2 === '' || db2 === 
   localStorage.setItem('cart', '[]')
 }
 export default {
-  name: 'PageIndex',
-  page: 'Shopping List'
+  name: 'PageIndex'
 }
 </script>

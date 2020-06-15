@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="glossy">
         <q-btn
           flat
           dense
@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          {{ essentialLinks[0].title }}
+          {{ $route.meta }}
         </q-toolbar-title>
 
         <div>App by Higor Hicker</div>
@@ -28,7 +28,7 @@
       <q-list>
         <q-item-label
           header
-          class="text-grey-8"
+          class="text-grey-8 bg-grey-4"
         >
           O que você quer fazer?
         </q-item-label>
@@ -38,6 +38,10 @@
           v-bind="link"
         />
       </q-list>
+      <div style="position: absolute; bottom: 0; width: 100%;">
+        <img style="width: 80px; margin-left: 50%; transform: translate(-50%)" src="../LOGO.png" alt="Logotipo">
+        <p style="text-align: center" class="text-grey-6">App Version 2.0</p>
+      </div>
     </q-drawer>
 
     <q-page-container>

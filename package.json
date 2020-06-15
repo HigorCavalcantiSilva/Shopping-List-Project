@@ -22,6 +22,7 @@
     "nativescript-sqlite": "^2.6.3",
     "quasar": "^1.0.0",
     "sqlite3": "^4.2.0",
+    "vue-head": "^2.2.0",
     "vue2-storage": "^5.0.0"
   },
   "devDependencies": {
