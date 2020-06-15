@@ -136,8 +136,7 @@ export default {
       // Adicionar Seção
     },
     link: function (id) {
-      location.href = `#/products?id=${id}&conf=NO`
-      this.$router.go(`#/products?id=${id}&conf=NO`)
+      location.href = `#/products/${id}`
     }
   }
 }

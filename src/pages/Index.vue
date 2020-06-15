@@ -9,7 +9,7 @@
     <div style="text-align: center;">
       <h3>Controle de Compras</h3>
       <h6 style="margin-bottom: 0">Cansado de esquecer de algo quando vai ao supermercado?</h6>
-      <h6 style="margin-top: 0">Esse app vai te ajudar para que isso não aconteça!😉</h6>
+      <h6 style="margin-top: 0; margin-bottom: 0">Esse app vai te ajudar para que isso não aconteça!😉</h6>
     </div>
   </div>
   <q-footer class="glossy" elevated>

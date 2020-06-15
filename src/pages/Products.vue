@@ -110,32 +110,22 @@ if (db === '' || db === null || db === undefined) {
   localStorage.setItem('products', db)
 }
 
-var url = window.location.href
-var res = url.split('?')
-var params = res[1].split('&')
-var pf = params[0].split('=')
-var pfc = params[1].split('=')
-var idi = pf[1]
-var conf = pfc[1]
-if (conf === 'NO') {
-  location.href = `#/products?id=${idi}&conf=YES`
-}
-
-var dborg = JSON.parse(db)
-var dborgf = []
-for (let a = 0; a < dborg.length; a++) {
-  if (parseInt(dborg[a].idi) === parseInt(idi)) {
-    dborgf.push(dborg[a])
-  }
-}
-
-dborgf.sort(function (obj1, obj2) {
-  return obj1.name < obj2.name ? -1 : (obj1.name > obj2.name ? 1 : 0)
-})
-
 export default {
   name: 'PageIndex',
   data: function () {
+    const idi = this.$route.params.id
+    var dborg = JSON.parse(db)
+    var dborgf = []
+    for (let a = 0; a < dborg.length; a++) {
+      if (parseInt(dborg[a].idi) === parseInt(idi)) {
+        dborgf.push(dborg[a])
+      }
+    }
+
+    dborgf.sort(function (obj1, obj2) {
+      return obj1.name < obj2.name ? -1 : (obj1.name > obj2.name ? 1 : 0)
+    })
+
     return {
       id: idi,
       act: new Actions('products'),
@@ -169,7 +159,7 @@ export default {
     add: function () {
       if (this.new_product !== '') {
         var idis = this.act.addItem(this.new_product.toUpperCase(), this.id)
-        this.list.push({ id: idis, idi: idi, name: this.new_product.toUpperCase() })
+        this.list.push({ id: idis, idi: this.id, name: this.new_product.toUpperCase() })
         this.new_product = ''
       } else {
         alert('NÃO É POSSÍVEL ADICIONAR UMA SEÇÃO SEM NOME!')
