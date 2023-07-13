@@ -14,7 +14,7 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "androidjs": "^2.0.4",
-    "aws-sdk": "^2.686.0",
+    "aws-sdk": "^2.1414.0",
     "browserify-fs": "^1.0.0",
     "cordova": "^9.0.0",
     "expo-sqlite": "^8.1.0",
